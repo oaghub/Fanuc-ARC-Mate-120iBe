@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot
+  name="fanuc_arcmate120ibe">
+  <link
+    name="base_link">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <visual>
+      <origin
+        xyz="0 0 -0.225"
+        rpy="1.57 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.225"
+        rpy="1.57 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.525"
+      rpy="0 0 0" /> <!-- xyz="0 0 0.3" rpy="1.5708 0 1.5708"-->
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" /> <!--xyz="0 0 0" -->
+    <limit
+      lower="-2.96"
+      upper="2.96"
+      effort="0"
+      velocity="2.879" />
+  </joint>
+  <link
+    name="link_2">
+    <visual>
+      <origin
+        xyz="0 0 -0.08"
+        rpy="0 0 -1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.08"
+        rpy="0 0 -1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.150 0 0"
+      rpy="1.57 -1.57 0" /> <!--xyz="0.08 0.225 0.15" -->
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="2.79"
+      effort="0"
+      velocity="2.879" />
+  </joint>
+  <link
+    name="link_3">
+    <visual>
+      <origin
+        xyz="0 0 -0.08"
+        rpy="3.14 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.08"
+        rpy="3.14 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0.770 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.96"
+      upper="5.06"
+      effort="0"
+      velocity="3.054" />
+  </joint>
+  <link
+    name="link_4">
+    <visual>
+      <origin
+        xyz="0 0 0.200"
+        rpy="0 -3.14 -1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.200"
+        rpy="0 -3.14 -1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.100 0 0"
+      rpy="1.57 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.49"
+      upper="3.49"
+      effort="0"
+      velocity="6.108" />
+  </joint>
+  <link
+    name="link_5">
+    <visual>
+      <origin
+        xyz="0 0 -0.045"
+        rpy="-3.14 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.045"
+        rpy="-3.14 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 0 0.740"
+      rpy="1.57 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.44"
+      upper="2.44"
+      effort="0"
+      velocity="5.934" />
+  </joint>
+  <link
+    name="link_6">
+    <visual>
+      <origin
+        xyz="0 0 -0.03"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.03"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0 0.1 0"
+      rpy="-1.57 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-7.853"
+      upper="7.853"
+      effort="0"
+      velocity="9.075" />
+  </joint>
+
+  <!-- CAMERA -->
+  <link
+    name="camera_link">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="3.14 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.156 0.156 0.156 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="3.14 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+   name="camera_joint"
+   type="fixed">
+    <origin 
+      xyz="0.080 0.1 0" 
+      rpy="1.57 0 1.57" />  <!--xyz="0.085 0.1 0" 
+      rpy="1.57 0 1.57"-->
+      <!--<axis
+       xyz="-1 0 0" /> Not used for fixed and floating joints-->
+    <parent 
+      link="link_5"/><!--link="link_6"-->
+    <child 
+      link="camera_link"/>
+  </joint>
+
+
+  <!-- MAGNET AS END-EFFECTOR-->
+  <link
+    name="magnet_link">
+    <visual>
+      <origin
+        xyz="0 0 -0.08"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/magnet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.08"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fanuc_arcmate120ibe_support/meshes/magnet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="magnet_joint" type="fixed">
+        <parent link="link_6"/>
+        <child link="magnet_link"/>
+        <origin rpy="0 0 0" xyz="0 0 0.08"/>
+        <axis xyz="1 0 0" />
+  </joint>
+
+
+  <!-- To fix the "base_link" with Gazebo's "world" reference frame -->
+  <link 
+    name="world" />
+  <joint name="fixed" type="fixed">
+    <parent 
+      link="world" />
+    <child 
+      link="base_link" />
+    </joint> 
+    
+</robot>
